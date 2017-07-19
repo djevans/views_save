@@ -1,0 +1,18 @@
+# Saved View routing definition
+
+entity.saved_view.canonical:
+  route_name: entity.saved_view.canonical
+  base_route: entity.saved_view.canonical
+  title: 'View'
+
+entity.saved_view.edit_form:
+  route_name: entity.saved_view.edit_form
+  base_route: entity.saved_view.canonical
+  title: 'Edit'
+
+entity.saved_view.delete_form:
+  route_name:  entity.saved_view.delete_form
+  base_route:  entity.saved_view.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,22 @@
+add saved view entities:
+  title: 'Create new Saved View entities'
+
+administer saved view entities:
+  title: 'Administer Saved View entities'
+  description: 'Allow to access the administration form to configure Saved View entities.'
+  restrict access: true
+
+delete saved view entities:
+  title: 'Delete Saved View entities'
+
+edit saved view entities:
+  title: 'Edit Saved View entities'
+
+access saved view overview:
+  title: 'Access the Saved View overview page'
+
+view published saved view entities:
+  title: 'View published Saved View entities'
+
+view unpublished saved view entities:
+  title: 'View unpublished Saved View entities'

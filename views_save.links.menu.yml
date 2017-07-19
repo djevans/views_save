@@ -1,0 +1,18 @@
+
+# Saved View menu items definition
+entity.saved_view.collection:
+  title: 'Saved View list'
+  route_name: entity.saved_view.collection
+  description: 'List Saved View entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Saved View type menu items definition
+entity.saved_view_type.collection:
+  title: 'Saved View type'
+  route_name: entity.saved_view_type.collection
+  description: 'List Saved View type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

@@ -1,0 +1,11 @@
+entity.saved_view.add_form:
+  route_name: 'entity.saved_view.add_page'
+  title: 'Add Saved View'
+  appears_on:
+    - entity.saved_view.collection
+entity.saved_view_type.add_form:
+  route_name: 'entity.saved_view_type.add_form'
+  title: 'Add Saved View type'
+  appears_on:
+    - entity.saved_view_type.collection
+
