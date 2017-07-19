@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains views_save.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function views_save_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the views_save module.
+    case 'help.page.views_save':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enables users to save their current exposed filter settings for views.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function views_save_theme() {
+  return [
+    'views_save' => [
+      'render element' => 'children',
+    ],
+  ];
+}

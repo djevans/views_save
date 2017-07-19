@@ -1,0 +1,5 @@
+name: Views Save
+type: module
+description: Enables users to save their current exposed filter settings for views.
+core: 8.x
+package: Views
