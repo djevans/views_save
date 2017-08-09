@@ -157,6 +157,21 @@ class SavedView extends ContentEntityBase implements SavedViewInterface {
   /**
    * {@inheritdoc}
    */
+  public function getViewPath() {
+    return $this->get('view_path')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setViewPath($path) {
+    $this->set('view_path', $path);
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
@@ -217,6 +232,22 @@ class SavedView extends ContentEntityBase implements SavedViewInterface {
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
+
+    $fields['view_path'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('View Path'))
+      ->setDescription('The path to the view, including query parameters')
+      ->setSetting('max_length', 2048)
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -2,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'hidden',
+        'weight' => -2,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
 
     return $fields;
   }

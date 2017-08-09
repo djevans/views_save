@@ -74,4 +74,23 @@ interface SavedViewInterface extends  ContentEntityInterface, EntityChangedInter
    */
   public function setPublished($published);
 
+  /**
+   * Gets the Saved view path.
+   *
+   * @return string
+   *   Path of the Saved view.
+   */
+  public function getViewPath();
+
+  /**
+   * Sets the Saved view path.
+   *
+   * @param string $path
+   *   The path to the view.
+   *
+   * @return \Drupal\views_save\Entity\SavedViewInterface
+   *   The called Saved view entity.
+   */
+  public function setViewPath($path);
+
 }
