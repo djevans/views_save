@@ -149,6 +149,14 @@ class SavedView extends ContentEntityBase implements SavedViewInterface {
   /**
    * {@inheritdoc}
    */
+  public function setUnpublished() {
+    $this->set('status', FALSE);
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
